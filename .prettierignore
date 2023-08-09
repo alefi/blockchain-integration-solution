@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+
+# Hardhat files
+cache
+artifacts
+typechain
+typechain-types

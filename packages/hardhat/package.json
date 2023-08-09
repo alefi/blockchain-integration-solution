@@ -1,0 +1,32 @@
+{
+  "name": "bc-hardhat",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "dotenv -e ../../.env.local hardhat compile",
+    "deploy:sepolia": "dotenv -e ../../.env.local hardhat -- run --network sepolia scripts/deploy.ts",
+    "deploy": "hardhat run --network localhost scripts/deploy.ts",
+    "node": "npx hardhat node",
+    "lint:contracts": "hardhat check",
+    "lint:ts": "eslint .",
+    "lint": "npm run lint:contracts && npm run lint:ts",
+    "test": "dotenv -e ../../.env.test hardhat test",
+    "clean": "npx hardhat clean && rm -rf .turbo abi dist node_modules"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "3.0.0",
+    "@nomiclabs/hardhat-solhint": "3.0.1",
+    "@types/node": "20.4.8",
+    "hardhat": "2.17.1",
+    "hardhat-abi-exporter": "2.10.1",
+    "solhint": "3.5.1"
+  },
+  "dependencies": {
+    "eslint-config-custom": "*",
+    "zod": "3.21.4"
+  },
+  "peerDependencies": {
+    "dotenv-cli": "latest"
+  }
+}
