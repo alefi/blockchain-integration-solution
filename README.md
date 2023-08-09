@@ -105,13 +105,13 @@ The following are used for deployment and interacting on the real blockchain:
 - `PROVIDER_APP_ID`: (optional) In terms of Infura should contain PROJECT ID
 - `PROVIDER_HTTP_URL`: (optional) Use for contract deployment
 - `PROVIDER_WS_URL`: (optional) Use for interaction with a contract
-- `WALLET_PRIVATE_KEY`: (optional, security risk) A private wallet key that is going to be used for the contract deployment on real blockchain and retrieve data from that contract as well.
+- `WALLET_PRIVATE_KEY`: A private wallet key that is going to be used for the contract deployment on real blockchain and retrieve data from that contract as well.
 
 > 📝 _Please take a look at provided [env example](./.env.example) file located at the project root level._
 
 ### Initialisation
 
-To make sure everithing works fine, copy [.env.example](./.env.example) file into .env.local and adjust settings inside according section above.
+To make sure everithing works fine, copy [.env.example](./.env.example) file into `.env.local` and adjust settings inside according section above.
 
 To first-time initialize the repository, run the following commands:
 
@@ -164,7 +164,7 @@ npm -w client run dev
 
 First, create an account on [Infura](https://www.infura.io) if you don't have one. It also needed to create an API Key. After passing that steps you will find demanded values to setup the application environment there on Infura's dashboard.
 
-Second, set corresponding values into the .env.local file. Make sure you use Web socket provider for `PROVIDER_BASE_URL`, otherwise subscriptions won't work. It is important to set each of variables correctly, especially `WALLET_PRIVATE_KEY`.
+Second, set corresponding values into the `.env.local` file. Make sure you use Web socket provider for `PROVIDER_WS_URL`, otherwise subscriptions won't work. It is important to set each of variables correctly, especially `WALLET_PRIVATE_KEY`.
 
 Third, get some [sepolia coins](https://www.infura.io/faucet/sepolia) to your wallet account.
 
@@ -174,7 +174,7 @@ Then type the following commands on your terminal window:
 npm -w bc-hardhat run deploy:sepolia
 ```
 
-It should deploy the smart contract and print out its address. Set just received address as the contract address in .env.local file (located at the project root level), and run the following command:
+It should deploy the smart contract and print out its address. Set just received address as the contract address in `.env.local` file (located at the project root level), and run the following command:
 
 ```console
 npm -w client run dev:sepolia
