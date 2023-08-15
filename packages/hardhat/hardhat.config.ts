@@ -1,5 +1,4 @@
 import '@nomicfoundation/hardhat-toolbox';
-import 'hardhat-abi-exporter';
 import { HardhatUserConfig } from 'hardhat/config';
 import { type NetworksUserConfig } from 'hardhat/types';
 import { config } from './config';
@@ -29,10 +28,6 @@ const hardhatUserConfig: HardhatUserConfig = {
         runs: 200,
       },
     },
-  },
-  abiExporter: {
-    clear: true,
-    runOnCompile: true,
   },
   networks,
 };
