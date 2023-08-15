@@ -12,15 +12,15 @@
   },
   "dependencies": {
     "bc-hardhat": "0.0.1",
-    "eslint-config-custom": "*",
+    "eslint-config-custom": "0.0.1",
     "ts-node": "10.9.1",
-    "web3": "4.0.3",
-    "zod": "3.21.4"
+    "web3": "4.1.0",
+    "zod": "3.22.0"
   },
   "devDependencies": {
     "@tsconfig/node18": "^18.2.0",
     "@types/jest": "^29.5.3",
-    "@types/node": "^20.4.8",
+    "@types/node": "20.5.0",
     "ganache": "7.9.0",
     "jest": "29.6.2",
     "ts-jest": "29.1.1"
