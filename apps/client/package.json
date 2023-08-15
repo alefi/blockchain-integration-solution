@@ -8,7 +8,7 @@
     "dev:sepolia": "dotenv -e ../../.env.local ts-node src/index.ts",
     "lint": "eslint .",
     "test": "NODE_ENV=test dotenv -e ../../.env.test jest",
-    "clean": "rm -rf .turbo .next package-lock.json node_modules"
+    "clean": "rm -rf .turbo node_modules"
   },
   "dependencies": {
     "bc-hardhat": "0.0.1",
