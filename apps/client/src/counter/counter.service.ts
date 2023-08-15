@@ -35,7 +35,7 @@ export class CounterService {
       this.signer.privateKey,
     );
 
-    return await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
+    await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
   }
 
   private subscribe(onData: OnEventFn = () => null, onError?: OnEventFn) {

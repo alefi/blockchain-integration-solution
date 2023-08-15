@@ -82,14 +82,8 @@ This code is provided as a PoC and it could be improved. For instance:
 - create common network config to be able choose one easily
 - use waffle and web3 on the Hardhat component
 
-- improve components isolation
-- restructure the code, move some common stuff into helpers
 - optimise transactions, cache commonly used data with some TTL, such as `estimatedGas`
 - handle errors better
-
-- improve application tests, get rid of a contract mock
-- fix failing test at counter.increment
-- try calling hardhat's deploy for tests in client application, or at least use the same configurations
 
 ## Usage
 
