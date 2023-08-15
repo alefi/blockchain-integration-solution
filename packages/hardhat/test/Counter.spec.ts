@@ -1,11 +1,10 @@
 import { expect } from 'chai';
-import { ethers } from 'hardhat';
+
+import { deployCounterFixture, loadFixture } from './fixtures';
 
 describe('Counter', function () {
   it('Should increment the counter and catch a confirmation event', async () => {
-    const Counter = await ethers.getContractFactory('Counter');
-    const counter = await Counter.deploy();
-    await counter.waitForDeployment();
+    const { counter } = await loadFixture(deployCounterFixture);
 
     expect(await counter.getCount()).to.equal(0);
 
